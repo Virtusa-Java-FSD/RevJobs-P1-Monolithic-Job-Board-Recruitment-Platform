@@ -1,12 +1,16 @@
-import { BrowserRouter } from "react-router-dom";
+// src/App.tsx
+import React, { type JSX } from "react";
+import Navbar from "./components/common/Navbar";
 import AppRoutes from "./routes/AppRoutes";
+import "./App.css";
 
-function App() {
+export default function App(): JSX.Element {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <div className="app-root">
+      <Navbar />
+      <main style={{ padding: 20 }}>
+        <AppRoutes />
+      </main>
+    </div>
   );
 }
-
-export default App;
